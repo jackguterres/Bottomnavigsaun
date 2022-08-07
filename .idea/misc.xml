@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/guter/AndroidStudioProjects/Bottomnavigsaun/app/src/main/res/layout/activity_favoritu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/guter/AndroidStudioProjects/Bottomnavigsaun/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/guter/AndroidStudioProjects/Bottomnavigsaun/app/src/main/res/layout/activity_notifikasaun.xml" value="0.1890625" />
         <entry key="..\:/Users/guter/AndroidStudioProjects/Bottomnavigsaun/app/src/main/res/layout/activity_peskiza.xml" value="0.1890625" />
         <entry key="..\:/Users/guter/AndroidStudioProjects/Bottomnavigsaun/app/src/main/res/menu/menu_item.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_favoritu.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_notifikasaun.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_peskiza.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>

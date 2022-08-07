@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -15,27 +16,26 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class FavorituActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    TextView textView;
-    FrameLayout frameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritu);
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        textView = findViewById(R.id.text_view);
-        frameLayout = findViewById(R.id.frame_container);
-        bottomNavigationView.setOnNavigationItemSelectedListener(nav);
-    }
-    private BottomNavigationView.OnNavigationItemSelectedListener nav
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        overridePendingTransition(0,0);
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById( R.id.bottom_navigation );
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(1);
+        menuItem.setChecked( true );
+
+        bottomNavigationView.setOnNavigationItemSelectedListener( new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
             switch (item.getItemId()){
-
                 case R.id.navigation_home:
                     Intent intent1 = new Intent(FavorituActivity.this, MainActivity.class);
                     startActivity(intent1);
@@ -56,7 +56,9 @@ public class FavorituActivity extends AppCompatActivity {
                     break;
 
             }
-            return  false;
+            return  true;
         }
-    };
+      });
+
+    }
 }
